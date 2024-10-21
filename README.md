@@ -1,0 +1,1 @@
+# scorpex-standalone-pos-system
