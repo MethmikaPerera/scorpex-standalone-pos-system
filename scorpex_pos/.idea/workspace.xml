@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
+=======
+    <list default="true" id="0c28d94a-5060-492a-8f5d-8554899fc624" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/interfaces/loginWindow.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/loginWindow.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/loginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/loginWindow.java" afterDir="false" />
+    </list>
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +25,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+<<<<<<< Updated upstream
+=======
+    "last_opened_file_path": "C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+>>>>>>> Stashed changes
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -25,6 +48,12 @@
     <task active="true" id="Default" summary="Default task">
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< Updated upstream
+=======
+      <updated>1729527645504</updated>
+      <workItem from="1729527646438" duration="271000" />
+      <workItem from="1729531940440" duration="757000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
