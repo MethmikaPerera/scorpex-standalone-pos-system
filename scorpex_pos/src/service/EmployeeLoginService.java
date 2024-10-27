@@ -8,10 +8,6 @@ import java.sql.ResultSet;
 
 public class EmployeeLoginService {
 
-
-
-
-
     public Employee userAuthentication(String email, String password) throws Exception {
             String query = "SELECT * FROM employee WHERE email = '" + email + "' AND password = '" + password + "'";
             ResultSet user = MySQL.executeQuery(query);
@@ -24,7 +20,7 @@ public class EmployeeLoginService {
                 String name = user.getString("name");
                 String userEmail = user.getString("email");
                 String userPassword = user.getString("password");
-                EmployeeRole role = getUserRole(user.getString("role_id"));
+                EmployeeRole role = getUserRole(user.getString("employee_role_role_id"));
 
                 Employee authenticateUser = new Employee(empId, name, userEmail, userPassword,role);
                 return authenticateUser;
@@ -37,11 +33,11 @@ public class EmployeeLoginService {
 
     public EmployeeRole getUserRole(String userRole) throws Exception {
 
-        String queryRole = "SELECT * FROM user_role WHERE role = '" +userRole + "'";
+        String queryRole = "SELECT * FROM employee_role WHERE role_id = '" +userRole + "'";
         ResultSet role = MySQL.executeQuery(queryRole);
 
         if (role.next()) {
-            int roleId = role.getInt("role_id");
+            String roleId = role.getString("role_id");
             String roleName = role.getString("type");
             return new EmployeeRole(roleId,roleName);
         } else {

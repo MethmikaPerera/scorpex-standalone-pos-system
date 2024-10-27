@@ -2,15 +2,15 @@ package entity;
 
 public class EmployeeRole {
 
-    private int id;
+    private String id;
 
     private String role;
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -22,7 +22,7 @@ public class EmployeeRole {
         this.role = role;
     }
 
-    public EmployeeRole(int id, String role) {
+    public EmployeeRole(String id, String role) {
         this.id = id;
         this.role = role;
     }

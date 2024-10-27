@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/entity/UserRole.java</file>
-            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/entity/User.java</file>
-            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/interfaces/LoginWindow.java</file>
-            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/database/DBConnector.java</file>
-            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/service/LoginService.java</file>
+            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/service/EmployeeLoginService.java</file>
+            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/entity/EmployeeRole.java</file>
+            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/database/MySQL.java</file>
+            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/interfaces/EmployeeLoginWindow.java</file>
+            <file>file:/C:/Users/mamet/Documents/GitHub/scorpex-standalone-pos-system/scorpex_pos/src/entity/Employee.java</file>
         </group>
     </open-files>
 </project-private>
