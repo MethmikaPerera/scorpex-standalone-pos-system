@@ -1,6 +1,6 @@
 package entity;
 
-public class UserRole {
+public class EmployeeRole {
 
     private int id;
 
@@ -22,7 +22,7 @@ public class UserRole {
         this.role = role;
     }
 
-    public UserRole(int id, String role) {
+    public EmployeeRole(int id, String role) {
         this.id = id;
         this.role = role;
     }

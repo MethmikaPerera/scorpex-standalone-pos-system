@@ -1,32 +1,32 @@
 package service;
 
-import database.DBConnector;
-import entity.User;
-import entity.UserRole;
+import database.MySQL;
+import entity.Employee;
+import entity.EmployeeRole;
 
 import java.sql.ResultSet;
 
-public class LoginService {
+public class EmployeeLoginService {
 
 
 
 
 
-    public User userAuthentication(String email, String password) throws Exception {
+    public Employee userAuthentication(String email, String password) throws Exception {
             String query = "SELECT * FROM employee WHERE email = '" + email + "' AND password = '" + password + "'";
-            ResultSet user = DBConnector.executeQuery(query);
+            ResultSet user = MySQL.executeQuery(query);
 
             if (user.next()) {
                 // User found, process the result
                 System.out.println("User found: " + user.getString("name"));
 
-                String empId = user.getString("empId");
+                String empId = user.getString("emp_id");
                 String name = user.getString("name");
                 String userEmail = user.getString("email");
                 String userPassword = user.getString("password");
-                UserRole role = getUserRole(user.getString("role"));
+                EmployeeRole role = getUserRole(user.getString("role_id"));
 
-                User authenticateUser = new User(empId, name, userEmail, userPassword,role);
+                Employee authenticateUser = new Employee(empId, name, userEmail, userPassword,role);
                 return authenticateUser;
             } else {
                 // No user found
@@ -35,15 +35,15 @@ public class LoginService {
             }
     }
 
-    public UserRole getUserRole(String userRole) throws Exception {
+    public EmployeeRole getUserRole(String userRole) throws Exception {
 
         String queryRole = "SELECT * FROM user_role WHERE role = '" +userRole + "'";
-        ResultSet role = DBConnector.executeQuery(queryRole);
+        ResultSet role = MySQL.executeQuery(queryRole);
 
         if (role.next()) {
-            int roleId = role.getInt("id");
-            String roleName = role.getString("role");
-            return new UserRole(roleId,roleName);
+            int roleId = role.getInt("role_id");
+            String roleName = role.getString("type");
+            return new EmployeeRole(roleId,roleName);
         } else {
             return null;
         }

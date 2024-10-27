@@ -1,12 +1,12 @@
 package entity;
 
-public class User {
+public class Employee {
 
     private String empId;
     private String name;
     private String email ;
     private String password;
-    private UserRole role;
+    private EmployeeRole role;
 
     public String getEmpId() {
         return empId;
@@ -40,22 +40,22 @@ public class User {
         this.password = password;
     }
 
-    public UserRole getRole() {
+    public EmployeeRole getRole() {
         return role;
     }
 
-    public void setRole(UserRole role) {
+    public void setRole(EmployeeRole role) {
         this.role = role;
     }
 
-    public User(String empId, String name, String email, String password) {
+    public Employee(String empId, String name, String email, String password) {
         this.empId = empId;
         this.name = name;
         this.email = email;
         this.password = password;
     }
 
-    public User(String empId, String name, String email, String password, UserRole role) {
+    public Employee(String empId, String name, String email, String password, EmployeeRole role) {
         this.empId = empId;
         this.name = name;
         this.email = email;

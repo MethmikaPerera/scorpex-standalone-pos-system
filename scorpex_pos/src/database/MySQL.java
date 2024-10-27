@@ -4,13 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 
-public class DBConnector {
+public class MySQL {
     private static Connection connection;
 
     // Database credentials
     private static final String URL = "jdbc:mysql://localhost:3306/scorpex_pos";
     private static final String USER = "root";
-    private static final String PASSWORD = "Password";
+    private static final String PASSWORD = "Akinda@2004";
 
 
     // Constructor
