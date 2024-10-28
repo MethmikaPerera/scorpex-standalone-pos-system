@@ -19,7 +19,6 @@ public class MySQL {
             try {
                 // Initialize the connection
                 connection = DriverManager.getConnection(URL, USER, PASSWORD);
-                System.out.println("Connection to the database established successfully.");
             } catch (Exception e) {
                 System.out.println("Failed to establish a database connection.");
                 e.printStackTrace();

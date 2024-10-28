@@ -5,7 +5,6 @@
 package interfaces;
 
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
-import database.MySQL;
 import entity.Employee;
 import service.EmployeeLoginService;
 
@@ -44,6 +43,7 @@ public class EmployeeLoginWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Log In | Scorpex Clothing");
+        setPreferredSize(new java.awt.Dimension(900, 570));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
