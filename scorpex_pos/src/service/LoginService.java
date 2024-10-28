@@ -3,12 +3,13 @@ package service;
 import database.MySQL;
 import entity.Employee;
 import entity.EmployeeRole;
+import java.awt.Frame;
 
 import java.sql.ResultSet;
 
-public class EmployeeLoginService {
+public class LoginService {
 
-    public Employee userAuthentication(String email, String password) throws Exception {
+    public void userAuthentication(String email, String password, Frame window) throws Exception {
             String query = "SELECT * FROM employee WHERE email = '" + email + "' AND password = '" + password + "'";
             ResultSet user = MySQL.executeQuery(query);
 
@@ -21,9 +22,10 @@ public class EmployeeLoginService {
                 String userEmail = user.getString("email");
                 String userPassword = user.getString("password");
                 EmployeeRole role = getUserRole(user.getString("employee_role_role_id"));
+                
+                System.out.println("Success" + empId + name + role);
 
-                Employee authenticateUser = new Employee(empId, name, userEmail, userPassword,role);
-                return authenticateUser;
+                window.dispose();
             } else {
                 // No user found
                 System.out.println("User not found");
