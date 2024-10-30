@@ -132,8 +132,7 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         contentPanel.removeAll();  // Clear all components from jPanel3
         contentPanel.setPreferredSize(new Dimension(0, 0));
         contentPanel.add(panel, BorderLayout.CENTER);  // Add the new panel
-        contentPanel.revalidate();
-        contentPanel.repaint();
+        SwingUtilities.updateComponentTreeUI(contentPanel);
     }
 
     /**
@@ -153,11 +152,11 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         navPanel = new javax.swing.JPanel();
         homePanelButton = new javax.swing.JButton();
-        employeesPanelButton = new javax.swing.JButton();
-        salesPanelButton = new javax.swing.JButton();
-        reportsPanelButton = new javax.swing.JButton();
         productsPanelButton = new javax.swing.JButton();
         purchasePanelButton = new javax.swing.JButton();
+        salesPanelButton = new javax.swing.JButton();
+        employeesPanelButton = new javax.swing.JButton();
+        reportsPanelButton = new javax.swing.JButton();
         databasePanelButton = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -266,57 +265,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         });
         navPanel.add(homePanelButton);
 
-        employeesPanelButton.setBackground(new java.awt.Color(204, 204, 204));
-        employeesPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        employeesPanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        employeesPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee.png"))); // NOI18N
-        employeesPanelButton.setText("Employees");
-        employeesPanelButton.setBorderPainted(false);
-        employeesPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        employeesPanelButton.setFocusPainted(false);
-        employeesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        employeesPanelButton.setIconTextGap(10);
-        employeesPanelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                employeesPanelButtonActionPerformed(evt);
-            }
-        });
-        navPanel.add(employeesPanelButton);
-
-        salesPanelButton.setBackground(new java.awt.Color(204, 204, 204));
-        salesPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        salesPanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        salesPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/sales.png"))); // NOI18N
-        salesPanelButton.setText("Sales");
-        salesPanelButton.setBorderPainted(false);
-        salesPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        salesPanelButton.setFocusPainted(false);
-        salesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        salesPanelButton.setIconTextGap(10);
-        salesPanelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salesPanelButtonActionPerformed(evt);
-            }
-        });
-        navPanel.add(salesPanelButton);
-
-        reportsPanelButton.setBackground(new java.awt.Color(204, 204, 204));
-        reportsPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        reportsPanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        reportsPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/report.png"))); // NOI18N
-        reportsPanelButton.setText("Reports");
-        reportsPanelButton.setBorderPainted(false);
-        reportsPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        reportsPanelButton.setFocusPainted(false);
-        reportsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        reportsPanelButton.setIconTextGap(10);
-        reportsPanelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                reportsPanelButtonActionPerformed(evt);
-            }
-        });
-        navPanel.add(reportsPanelButton);
-
         productsPanelButton.setBackground(new java.awt.Color(204, 204, 204));
         productsPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         productsPanelButton.setForeground(new java.awt.Color(0, 0, 0));
@@ -350,6 +298,57 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
             }
         });
         navPanel.add(purchasePanelButton);
+
+        salesPanelButton.setBackground(new java.awt.Color(204, 204, 204));
+        salesPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        salesPanelButton.setForeground(new java.awt.Color(0, 0, 0));
+        salesPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/sales.png"))); // NOI18N
+        salesPanelButton.setText("Sales");
+        salesPanelButton.setBorderPainted(false);
+        salesPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        salesPanelButton.setFocusPainted(false);
+        salesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        salesPanelButton.setIconTextGap(10);
+        salesPanelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salesPanelButtonActionPerformed(evt);
+            }
+        });
+        navPanel.add(salesPanelButton);
+
+        employeesPanelButton.setBackground(new java.awt.Color(204, 204, 204));
+        employeesPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        employeesPanelButton.setForeground(new java.awt.Color(0, 0, 0));
+        employeesPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee.png"))); // NOI18N
+        employeesPanelButton.setText("Employees");
+        employeesPanelButton.setBorderPainted(false);
+        employeesPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        employeesPanelButton.setFocusPainted(false);
+        employeesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        employeesPanelButton.setIconTextGap(10);
+        employeesPanelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeesPanelButtonActionPerformed(evt);
+            }
+        });
+        navPanel.add(employeesPanelButton);
+
+        reportsPanelButton.setBackground(new java.awt.Color(204, 204, 204));
+        reportsPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        reportsPanelButton.setForeground(new java.awt.Color(0, 0, 0));
+        reportsPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/report.png"))); // NOI18N
+        reportsPanelButton.setText("Reports");
+        reportsPanelButton.setBorderPainted(false);
+        reportsPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reportsPanelButton.setFocusPainted(false);
+        reportsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        reportsPanelButton.setIconTextGap(10);
+        reportsPanelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportsPanelButtonActionPerformed(evt);
+            }
+        });
+        navPanel.add(reportsPanelButton);
 
         databasePanelButton.setBackground(new java.awt.Color(204, 204, 204));
         databasePanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -412,8 +411,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
 
         getContentPane().add(navPanel, java.awt.BorderLayout.LINE_START);
 
-        contentPanel.setAlignmentX(0.0F);
-        contentPanel.setAlignmentY(0.0F);
         contentPanel.setOpaque(false);
         contentPanel.setLayout(new java.awt.BorderLayout());
         getContentPane().add(contentPanel, java.awt.BorderLayout.CENTER);
