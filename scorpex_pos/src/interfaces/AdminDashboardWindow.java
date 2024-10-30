@@ -75,7 +75,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
     private void moveLeft() {
         Thread t = new Thread(
                 () -> {
-
                     for (int i = 200; i >= 70; i -= 10) {
                         navPanel.setPreferredSize(new Dimension(i, navPanel.getHeight()));
                         SwingUtilities.updateComponentTreeUI(navPanel);
