@@ -39,7 +39,7 @@ public class MySQL {
         }
     }
 
-    public static ResultSet executeQuery(String query) throws Exception {
+    public static ResultSet executeSearch(String query) throws Exception {
         getConnection();
         return connection.createStatement().executeQuery(query);
     }

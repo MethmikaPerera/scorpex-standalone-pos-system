@@ -11,7 +11,7 @@ public class LoginService {
 
     public void userAuthentication(String email, String password, Frame window) throws Exception {
             String query = "SELECT * FROM employee WHERE email = '" + email + "' AND password = '" + password + "'";
-            ResultSet user = MySQL.executeQuery(query);
+            ResultSet user = MySQL.executeSearch(query);
 
             if (user.next()) {
                 // User found, process the result
@@ -36,7 +36,7 @@ public class LoginService {
     public EmployeeRole getUserRole(String userRole) throws Exception {
 
         String queryRole = "SELECT * FROM employee_role WHERE role_id = '" +userRole + "'";
-        ResultSet role = MySQL.executeQuery(queryRole);
+        ResultSet role = MySQL.executeSearch(queryRole);
 
         if (role.next()) {
             String roleId = role.getString("role_id");
