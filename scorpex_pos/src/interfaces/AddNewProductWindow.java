@@ -5,6 +5,7 @@
 package interfaces;
 
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import javax.swing.JFileChooser;
 import service.AppIcon;
 
 /**
@@ -99,6 +100,11 @@ public class AddNewProductWindow extends javax.swing.JFrame {
         jLabel8.setText("Image");
 
         jButton2.setText("Choose Image");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -197,6 +203,12 @@ public class AddNewProductWindow extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JFileChooser fileChooser = new JFileChooser();
+        
+        fileChooser.showOpenDialog(this);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
