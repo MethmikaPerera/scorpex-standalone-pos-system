@@ -5,6 +5,10 @@
 package interfaces;
 
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 import service.AppIcon;
 
@@ -208,6 +212,8 @@ public class AddNewProductWindow extends javax.swing.JFrame {
         JFileChooser fileChooser = new JFileChooser();
         
         fileChooser.showOpenDialog(this);
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
