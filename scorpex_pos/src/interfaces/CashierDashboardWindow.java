@@ -55,17 +55,13 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         jLabel3.setText("\u00a9 Scorpex 2024");
         jLabel4.setText("Developed by Methmika Perera");
         
-        homePanelButton.setText("Home");
-        employeesPanelButton.setText("Employees");
+        homePanelButton.setText("Billing");
         salesPanelButton.setText("Sales");
-        reportsPanelButton.setText("Reports");
         productsPanelButton.setText("Products");
-        purchasePanelButton.setText("Purchase");
+        purchasePanelButton.setText("Invoice");
         
         homePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        employeesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         salesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        reportsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         productsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         purchasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
     }
@@ -91,32 +87,24 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         jLabel4.setText("");
         
         homePanelButton.setText("");
-        employeesPanelButton.setText("");
         salesPanelButton.setText("");
-        reportsPanelButton.setText("");
         productsPanelButton.setText("");
         purchasePanelButton.setText("");
         
         homePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        employeesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         salesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        reportsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         productsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         purchasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     }
     
     private void setNavDefaultColor() {
         homePanelButton.setBackground(btnBackground);
-        employeesPanelButton.setBackground(btnBackground);
         salesPanelButton.setBackground(btnBackground);
-        reportsPanelButton.setBackground(btnBackground);
         productsPanelButton.setBackground(btnBackground);
         purchasePanelButton.setBackground(btnBackground);
 
         homePanelButton.setForeground(btnForeground);
-        employeesPanelButton.setForeground(btnForeground);
         salesPanelButton.setForeground(btnForeground);
-        reportsPanelButton.setForeground(btnForeground);
         productsPanelButton.setForeground(btnForeground);
         purchasePanelButton.setForeground(btnForeground);
     }
