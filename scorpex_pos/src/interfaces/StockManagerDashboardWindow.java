@@ -16,7 +16,7 @@ import service.AppIcon;
  *
  * @author user
  */
-public class EmployeeDashboardWindow extends javax.swing.JFrame {
+public class StockManagerDashboardWindow extends javax.swing.JFrame {
     
     Color btnBackground = new Color(204,204,204);
     Color btnForeground = new Color(0,0,0);
@@ -25,7 +25,7 @@ public class EmployeeDashboardWindow extends javax.swing.JFrame {
     /**
      * Creates new form AdminDashboard
      */
-    public EmployeeDashboardWindow() {
+    public StockManagerDashboardWindow() {
         initComponents();
         
         AppIcon.setAppIcon(this);
@@ -467,7 +467,7 @@ public class EmployeeDashboardWindow extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EmployeeDashboardWindow().setVisible(true);
+                new StockManagerDashboardWindow().setVisible(true);
             }
         });
     }

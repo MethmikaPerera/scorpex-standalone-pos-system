@@ -13,12 +13,12 @@ import service.LoginService;
  *
  * @author mamet
  */
-public class EmployeeLoginWindow extends javax.swing.JFrame {
+public class LoginWindow extends javax.swing.JFrame {
 
     /**
      * Creates new form loginWindow
      */
-    public EmployeeLoginWindow() {
+    public LoginWindow() {
         initComponents();
         
         AppIcon.setAppIcon(this);
@@ -49,7 +49,6 @@ public class EmployeeLoginWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Log In | Scorpex Clothing");
         setMinimumSize(new java.awt.Dimension(900, 570));
-        setPreferredSize(new java.awt.Dimension(915, 600));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -143,7 +142,7 @@ public class EmployeeLoginWindow extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EmployeeLoginWindow().setVisible(true);
+                new LoginWindow().setVisible(true);
             }
         });
     }
