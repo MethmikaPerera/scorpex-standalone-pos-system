@@ -145,11 +145,11 @@ public class StockManagerDashboardWindow extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         navPanel = new javax.swing.JPanel();
         homePanelButton = new javax.swing.JButton();
-        salesPanelButton = new javax.swing.JButton();
         productsPanelButton = new javax.swing.JButton();
         purchasePanelButton = new javax.swing.JButton();
-        employeesPanelButton = new javax.swing.JButton();
         reportsPanelButton = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -258,23 +258,6 @@ public class StockManagerDashboardWindow extends javax.swing.JFrame {
         });
         navPanel.add(homePanelButton);
 
-        salesPanelButton.setBackground(new java.awt.Color(204, 204, 204));
-        salesPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        salesPanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        salesPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/sales.png"))); // NOI18N
-        salesPanelButton.setText("Sales");
-        salesPanelButton.setBorderPainted(false);
-        salesPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        salesPanelButton.setFocusPainted(false);
-        salesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        salesPanelButton.setIconTextGap(10);
-        salesPanelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salesPanelButtonActionPerformed(evt);
-            }
-        });
-        navPanel.add(salesPanelButton);
-
         productsPanelButton.setBackground(new java.awt.Color(204, 204, 204));
         productsPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         productsPanelButton.setForeground(new java.awt.Color(0, 0, 0));
@@ -309,23 +292,6 @@ public class StockManagerDashboardWindow extends javax.swing.JFrame {
         });
         navPanel.add(purchasePanelButton);
 
-        employeesPanelButton.setBackground(new java.awt.Color(204, 204, 204));
-        employeesPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        employeesPanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        employeesPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/employee.png"))); // NOI18N
-        employeesPanelButton.setText("Employees");
-        employeesPanelButton.setBorderPainted(false);
-        employeesPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        employeesPanelButton.setFocusPainted(false);
-        employeesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        employeesPanelButton.setIconTextGap(10);
-        employeesPanelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                employeesPanelButtonActionPerformed(evt);
-            }
-        });
-        navPanel.add(employeesPanelButton);
-
         reportsPanelButton.setBackground(new java.awt.Color(204, 204, 204));
         reportsPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         reportsPanelButton.setForeground(new java.awt.Color(0, 0, 0));
@@ -342,6 +308,32 @@ public class StockManagerDashboardWindow extends javax.swing.JFrame {
             }
         });
         navPanel.add(reportsPanelButton);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 65, Short.MAX_VALUE)
+        );
+
+        navPanel.add(jPanel3);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 65, Short.MAX_VALUE)
+        );
+
+        navPanel.add(jPanel2);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -427,18 +419,6 @@ public class StockManagerDashboardWindow extends javax.swing.JFrame {
         homePanelButton.setBackground(btnActive);
     }//GEN-LAST:event_homePanelButtonActionPerformed
 
-    private void employeesPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeesPanelButtonActionPerformed
-        updatePanel(new AdminEmployeesPanel());
-        setNavDefaultColor();
-        employeesPanelButton.setBackground(btnActive);
-    }//GEN-LAST:event_employeesPanelButtonActionPerformed
-
-    private void salesPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesPanelButtonActionPerformed
-        updatePanel(new AdminSalesPanel());
-        setNavDefaultColor();
-        salesPanelButton.setBackground(btnActive);
-    }//GEN-LAST:event_salesPanelButtonActionPerformed
-
     private void reportsPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportsPanelButtonActionPerformed
         updatePanel(new AdminReportsPanel());
         setNavDefaultColor();
@@ -474,7 +454,6 @@ public class StockManagerDashboardWindow extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JButton employeesPanelButton;
     private javax.swing.JPanel headerPanel;
     private javax.swing.JButton homePanelButton;
     private javax.swing.JLabel jLabel1;
@@ -484,6 +463,8 @@ public class StockManagerDashboardWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -493,6 +474,5 @@ public class StockManagerDashboardWindow extends javax.swing.JFrame {
     private javax.swing.JButton productsPanelButton;
     private javax.swing.JButton purchasePanelButton;
     private javax.swing.JButton reportsPanelButton;
-    private javax.swing.JButton salesPanelButton;
     // End of variables declaration//GEN-END:variables
 }
