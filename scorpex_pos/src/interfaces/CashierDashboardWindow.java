@@ -283,7 +283,7 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         purchasePanelButton.setBackground(new java.awt.Color(204, 204, 204));
         purchasePanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         purchasePanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        purchasePanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/grn.png"))); // NOI18N
+        purchasePanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/invoice.png"))); // NOI18N
         purchasePanelButton.setText("Invoices");
         purchasePanelButton.setBorderPainted(false);
         purchasePanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

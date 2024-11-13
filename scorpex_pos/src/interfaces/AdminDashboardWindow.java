@@ -61,7 +61,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         reportsPanelButton.setText("Reports");
         productsPanelButton.setText("Products");
         purchasePanelButton.setText("Purchase");
-        databasePanelButton.setText("Database");
         
         homePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         employeesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -69,7 +68,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         reportsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         productsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         purchasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        databasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
     }
     
     private void moveLeft() {
@@ -98,7 +96,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         reportsPanelButton.setText("");
         productsPanelButton.setText("");
         purchasePanelButton.setText("");
-        databasePanelButton.setText("");
         
         homePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         employeesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -106,7 +103,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         reportsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         productsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         purchasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        databasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     }
     
     private void setNavDefaultColor() {
@@ -116,7 +112,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         reportsPanelButton.setBackground(btnBackground);
         productsPanelButton.setBackground(btnBackground);
         purchasePanelButton.setBackground(btnBackground);
-        databasePanelButton.setBackground(btnBackground);
 
         homePanelButton.setForeground(btnForeground);
         employeesPanelButton.setForeground(btnForeground);
@@ -124,7 +119,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         reportsPanelButton.setForeground(btnForeground);
         productsPanelButton.setForeground(btnForeground);
         purchasePanelButton.setForeground(btnForeground);
-        databasePanelButton.setForeground(btnForeground);
     }
     
     private void updatePanel(JPanel panel) {
@@ -157,7 +151,7 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         salesPanelButton = new javax.swing.JButton();
         employeesPanelButton = new javax.swing.JButton();
         reportsPanelButton = new javax.swing.JButton();
-        databasePanelButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -356,22 +350,18 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         });
         navPanel.add(reportsPanelButton);
 
-        databasePanelButton.setBackground(new java.awt.Color(204, 204, 204));
-        databasePanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        databasePanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        databasePanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/database.png"))); // NOI18N
-        databasePanelButton.setText("Database");
-        databasePanelButton.setBorderPainted(false);
-        databasePanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        databasePanelButton.setFocusPainted(false);
-        databasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        databasePanelButton.setIconTextGap(10);
-        databasePanelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                databasePanelButtonActionPerformed(evt);
-            }
-        });
-        navPanel.add(databasePanelButton);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 65, Short.MAX_VALUE)
+        );
+
+        navPanel.add(jPanel1);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -474,12 +464,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         purchasePanelButton.setBackground(btnActive);
     }//GEN-LAST:event_purchasePanelButtonActionPerformed
 
-    private void databasePanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_databasePanelButtonActionPerformed
-        updatePanel(new AdminDatabasePanel());
-        setNavDefaultColor();
-        databasePanelButton.setBackground(btnActive);
-    }//GEN-LAST:event_databasePanelButtonActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -497,7 +481,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JButton databasePanelButton;
     private javax.swing.JButton employeesPanelButton;
     private javax.swing.JPanel headerPanel;
     private javax.swing.JButton homePanelButton;
@@ -508,6 +491,7 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
