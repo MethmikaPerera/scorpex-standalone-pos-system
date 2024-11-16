@@ -30,6 +30,9 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         
         AppIcon.setAppIcon(this);
         
+        usernameLabel.setText(AdminLoginWindow.loggedAdmin.getUsername());
+        emailLabel.setText(AdminLoginWindow.loggedAdmin.getEmail());
+        
         updatePanel(new AdminHomePanel());
         setNavDefaultColor();
         homePanelButton.setBackground(btnActive);
@@ -141,8 +144,8 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         logoutButton = new javax.swing.JButton();
         menuToggleButton = new javax.swing.JToggleButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        usernameLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         navPanel = new javax.swing.JPanel();
         homePanelButton = new javax.swing.JButton();
@@ -191,15 +194,15 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/profile-user.png"))); // NOI18N
-        jLabel5.setText("User Name");
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
-        jLabel5.setIconTextGap(5);
+        usernameLabel.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        usernameLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        usernameLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/profile-user.png"))); // NOI18N
+        usernameLabel.setText("User Name");
+        usernameLabel.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        usernameLabel.setIconTextGap(5);
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel6.setText("Email");
+        emailLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        emailLabel.setText("Email");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel7.setText("ADMIN");
@@ -217,8 +220,8 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 687, Short.MAX_VALUE)
                 .addGroup(headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
+                    .addComponent(usernameLabel, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(emailLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(logoutButton)
                 .addGap(21, 21, 21))
@@ -235,9 +238,9 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
                         .addGroup(headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(logoutButton)
                             .addGroup(headerPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(usernameLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)))
+                                .addComponent(emailLabel)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -481,6 +484,7 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel contentPanel;
+    private javax.swing.JLabel emailLabel;
     private javax.swing.JButton employeesPanelButton;
     private javax.swing.JPanel headerPanel;
     private javax.swing.JButton homePanelButton;
@@ -488,8 +492,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
@@ -502,5 +504,6 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
     private javax.swing.JButton purchasePanelButton;
     private javax.swing.JButton reportsPanelButton;
     private javax.swing.JButton salesPanelButton;
+    private javax.swing.JLabel usernameLabel;
     // End of variables declaration//GEN-END:variables
 }
