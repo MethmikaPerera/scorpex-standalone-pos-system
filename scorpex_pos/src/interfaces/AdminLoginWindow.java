@@ -7,11 +7,9 @@ package interfaces;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import database.MySQL;
 import entity.Admin;
-import entity.Employee;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import service.AppIcon;
-import service.LoginService;
 
 /**
  *

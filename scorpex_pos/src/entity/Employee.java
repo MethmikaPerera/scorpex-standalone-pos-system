@@ -2,65 +2,111 @@ package entity;
 
 public class Employee {
 
-    private String empId;
-    private String name;
+    private int empId;
+    private String username;
     private String email ;
     private String password;
-    private EmployeeRole role;
+    private String contact;
+    private int roleId;
+    private String role;
 
-    public String getEmpId() {
+    /**
+     * @return the empId
+     */
+    public int getEmpId() {
         return empId;
     }
 
-    public void setEmpId(String empId) {
+    /**
+     * @param empId the empId to set
+     */
+    public void setEmpId(int empId) {
         this.empId = empId;
     }
 
-    public String getName() {
-        return name;
+    /**
+     * @return the username
+     */
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    /**
+     * @param username the username to set
+     */
+    public void setUsername(String username) {
+        this.username = username;
     }
 
+    /**
+     * @return the email
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * @param email the email to set
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     * @return the password
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * @param password the password to set
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public EmployeeRole getRole() {
+    /**
+     * @return the contact
+     */
+    public String getContact() {
+        return contact;
+    }
+
+    /**
+     * @param contact the contact to set
+     */
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    /**
+     * @return the roleId
+     */
+    public int getRoleId() {
+        return roleId;
+    }
+
+    /**
+     * @param roleId the roleId to set
+     */
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
+    }
+
+    /**
+     * @return the role
+     */
+    public String getRole() {
         return role;
     }
 
-    public void setRole(EmployeeRole role) {
+    /**
+     * @param role the role to set
+     */
+    public void setRole(String role) {
         this.role = role;
     }
 
-    public Employee(String empId, String name, String email, String password) {
-        this.empId = empId;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
-
-    public Employee(String empId, String name, String email, String password, EmployeeRole role) {
-        this.empId = empId;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-    }
-
+    
 }
