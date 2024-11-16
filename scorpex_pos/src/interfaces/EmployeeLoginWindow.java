@@ -13,12 +13,12 @@ import service.LoginService;
  *
  * @author mamet
  */
-public class LoginWindow extends javax.swing.JFrame {
+public class EmployeeLoginWindow extends javax.swing.JFrame {
 
     /**
      * Creates new form loginWindow
      */
-    public LoginWindow() {
+    public EmployeeLoginWindow() {
         initComponents();
         
         AppIcon.setAppIcon(this);
@@ -121,7 +121,7 @@ public class LoginWindow extends javax.swing.JFrame {
         LoginService loginService = new LoginService();
 
         try {
-            loginService.userAuthentication(username, password, this);
+            loginService.employeeAuthentication(username, password, this);
         }catch (Exception e){
             System.out.println(e);
         }
@@ -142,7 +142,7 @@ public class LoginWindow extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LoginWindow().setVisible(true);
+                new EmployeeLoginWindow().setVisible(true);
             }
         });
     }

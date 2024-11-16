@@ -52,7 +52,7 @@ public class SplashScreenWindow extends javax.swing.JFrame {
                 }
 
                 splashScreen.dispose();
-                new LoginWindow().setVisible(true);
+                new EmployeeLoginWindow().setVisible(true);
             }
         });
         t.start();
