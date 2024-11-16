@@ -5,7 +5,11 @@
 package interfaces;
 
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import database.MySQL;
+import entity.Admin;
 import entity.Employee;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 import service.AppIcon;
 import service.LoginService;
 
@@ -14,6 +18,8 @@ import service.LoginService;
  * @author mamet
  */
 public class AdminLoginWindow extends javax.swing.JFrame {
+    
+    public static Admin loggedAdmin;
 
     /**
      * Creates new form loginWindow
@@ -22,6 +28,11 @@ public class AdminLoginWindow extends javax.swing.JFrame {
         initComponents();
         
         AppIcon.setAppIcon(this);
+    }
+    
+    private void clearFields() {
+        usernameField.setText("");
+        passwordField.setText("");
     }
 
     /**
@@ -120,10 +131,26 @@ public class AdminLoginWindow extends javax.swing.JFrame {
         String username = usernameField.getText();
         String password = String.valueOf(passwordField.getPassword());
         
-        LoginService loginService = new LoginService();
-
         try {
-            loginService.adminAuthentication(username, password, this);
+            ResultSet adminResult = MySQL.executeSearch("SELECT * FROM `admin` WHERE `email` = '" + username + "' AND `password` = '" + password + "'");
+
+            if (adminResult.next()) {
+                loggedAdmin = new Admin();
+                
+                // User found, process the result
+                loggedAdmin.setAdminID(adminResult.getInt("emp_id"));
+                loggedAdmin.setUsername(adminResult.getString("username"));
+                loggedAdmin.setEmail(adminResult.getString("email"));
+                loggedAdmin.setPassword(adminResult.getString("password"));
+                loggedAdmin.setContact(adminResult.getString("contact_no"));
+                
+                new AdminDashboardWindow().setVisible(true);
+                this.dispose();
+            } else {
+                // No user found
+                JOptionPane.showMessageDialog(this, "Invalid username or password", "Error", JOptionPane.ERROR_MESSAGE);
+                clearFields();
+            }
         }catch (Exception e){
             System.out.println(e);
         }
