@@ -15,6 +15,11 @@ public class AdminHomePanel extends javax.swing.JPanel {
      */
     public AdminHomePanel() {
         initComponents();
+        loadData();
+    }
+    
+    private void loadData() {
+        
     }
 
     /**
@@ -28,7 +33,7 @@ public class AdminHomePanel extends javax.swing.JPanel {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        reloadButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -62,11 +67,16 @@ public class AdminHomePanel extends javax.swing.JPanel {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel2.setText("Home");
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/refresh-page-24px.png"))); // NOI18N
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setFocusPainted(false);
+        reloadButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/refresh-page-24px.png"))); // NOI18N
+        reloadButton.setBorderPainted(false);
+        reloadButton.setContentAreaFilled(false);
+        reloadButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        reloadButton.setFocusPainted(false);
+        reloadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reloadButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -76,7 +86,7 @@ public class AdminHomePanel extends javax.swing.JPanel {
                 .addContainerGap(918, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(reloadButton)
                 .addGap(31, 31, 31))
         );
         jPanel2Layout.setVerticalGroup(
@@ -85,7 +95,7 @@ public class AdminHomePanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(reloadButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18))
         );
 
@@ -322,9 +332,12 @@ public class AdminHomePanel extends javax.swing.JPanel {
         add(jScrollPane1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void reloadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reloadButtonActionPerformed
+        loadData();
+    }//GEN-LAST:event_reloadButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -348,5 +361,6 @@ public class AdminHomePanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
+    private javax.swing.JButton reloadButton;
     // End of variables declaration//GEN-END:variables
 }

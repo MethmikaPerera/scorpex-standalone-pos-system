@@ -32,7 +32,7 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         
         updatePanel(new AdminHomePanel());
         setNavDefaultColor();
-        homePanelButton.setBackground(btnActive);
+        billingPanelButton.setBackground(btnActive);
     }
     
     private void moveRight() {
@@ -55,15 +55,15 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         jLabel3.setText("\u00a9 Scorpex 2024");
         jLabel4.setText("Developed by Methmika Perera");
         
-        homePanelButton.setText("Billing");
-        salesPanelButton.setText("Sales");
+        billingPanelButton.setText("Billing");
+        returnsPanelButton.setText("Sales");
         productsPanelButton.setText("Products");
-        purchasePanelButton.setText("Invoice");
+        invoicesPanelButton.setText("Invoice");
         
-        homePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        salesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        billingPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        returnsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         productsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        purchasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        invoicesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
     }
     
     private void moveLeft() {
@@ -86,27 +86,27 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         jLabel3.setText("");
         jLabel4.setText("");
         
-        homePanelButton.setText("");
-        salesPanelButton.setText("");
+        billingPanelButton.setText("");
+        returnsPanelButton.setText("");
         productsPanelButton.setText("");
-        purchasePanelButton.setText("");
+        invoicesPanelButton.setText("");
         
-        homePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        salesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        billingPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        returnsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         productsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        purchasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        invoicesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
     }
     
     private void setNavDefaultColor() {
-        homePanelButton.setBackground(btnBackground);
-        salesPanelButton.setBackground(btnBackground);
+        billingPanelButton.setBackground(btnBackground);
+        returnsPanelButton.setBackground(btnBackground);
         productsPanelButton.setBackground(btnBackground);
-        purchasePanelButton.setBackground(btnBackground);
+        invoicesPanelButton.setBackground(btnBackground);
 
-        homePanelButton.setForeground(btnForeground);
-        salesPanelButton.setForeground(btnForeground);
+        billingPanelButton.setForeground(btnForeground);
+        returnsPanelButton.setForeground(btnForeground);
         productsPanelButton.setForeground(btnForeground);
-        purchasePanelButton.setForeground(btnForeground);
+        invoicesPanelButton.setForeground(btnForeground);
     }
     
     private void updatePanel(JPanel panel) {
@@ -132,10 +132,10 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         navPanel = new javax.swing.JPanel();
-        homePanelButton = new javax.swing.JButton();
-        salesPanelButton = new javax.swing.JButton();
+        billingPanelButton = new javax.swing.JButton();
+        returnsPanelButton = new javax.swing.JButton();
         productsPanelButton = new javax.swing.JButton();
-        purchasePanelButton = new javax.swing.JButton();
+        invoicesPanelButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -229,39 +229,39 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         navPanel.setPreferredSize(new java.awt.Dimension(200, 655));
         navPanel.setLayout(new java.awt.GridLayout(10, 1));
 
-        homePanelButton.setBackground(new java.awt.Color(255, 204, 51));
-        homePanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        homePanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        homePanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/bill.png"))); // NOI18N
-        homePanelButton.setText("Billing");
-        homePanelButton.setBorderPainted(false);
-        homePanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        homePanelButton.setFocusPainted(false);
-        homePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        homePanelButton.setIconTextGap(10);
-        homePanelButton.addActionListener(new java.awt.event.ActionListener() {
+        billingPanelButton.setBackground(new java.awt.Color(255, 204, 51));
+        billingPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        billingPanelButton.setForeground(new java.awt.Color(0, 0, 0));
+        billingPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/bill.png"))); // NOI18N
+        billingPanelButton.setText("Billing");
+        billingPanelButton.setBorderPainted(false);
+        billingPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        billingPanelButton.setFocusPainted(false);
+        billingPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        billingPanelButton.setIconTextGap(10);
+        billingPanelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                homePanelButtonActionPerformed(evt);
+                billingPanelButtonActionPerformed(evt);
             }
         });
-        navPanel.add(homePanelButton);
+        navPanel.add(billingPanelButton);
 
-        salesPanelButton.setBackground(new java.awt.Color(204, 204, 204));
-        salesPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        salesPanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        salesPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/return-box.png"))); // NOI18N
-        salesPanelButton.setText("Returns");
-        salesPanelButton.setBorderPainted(false);
-        salesPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        salesPanelButton.setFocusPainted(false);
-        salesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        salesPanelButton.setIconTextGap(10);
-        salesPanelButton.addActionListener(new java.awt.event.ActionListener() {
+        returnsPanelButton.setBackground(new java.awt.Color(204, 204, 204));
+        returnsPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        returnsPanelButton.setForeground(new java.awt.Color(0, 0, 0));
+        returnsPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/return-box.png"))); // NOI18N
+        returnsPanelButton.setText("Returns");
+        returnsPanelButton.setBorderPainted(false);
+        returnsPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        returnsPanelButton.setFocusPainted(false);
+        returnsPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        returnsPanelButton.setIconTextGap(10);
+        returnsPanelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salesPanelButtonActionPerformed(evt);
+                returnsPanelButtonActionPerformed(evt);
             }
         });
-        navPanel.add(salesPanelButton);
+        navPanel.add(returnsPanelButton);
 
         productsPanelButton.setBackground(new java.awt.Color(204, 204, 204));
         productsPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -280,22 +280,22 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         });
         navPanel.add(productsPanelButton);
 
-        purchasePanelButton.setBackground(new java.awt.Color(204, 204, 204));
-        purchasePanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        purchasePanelButton.setForeground(new java.awt.Color(0, 0, 0));
-        purchasePanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/invoice.png"))); // NOI18N
-        purchasePanelButton.setText("Invoices");
-        purchasePanelButton.setBorderPainted(false);
-        purchasePanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        purchasePanelButton.setFocusPainted(false);
-        purchasePanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        purchasePanelButton.setIconTextGap(10);
-        purchasePanelButton.addActionListener(new java.awt.event.ActionListener() {
+        invoicesPanelButton.setBackground(new java.awt.Color(204, 204, 204));
+        invoicesPanelButton.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        invoicesPanelButton.setForeground(new java.awt.Color(0, 0, 0));
+        invoicesPanelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/invoice.png"))); // NOI18N
+        invoicesPanelButton.setText("Invoices");
+        invoicesPanelButton.setBorderPainted(false);
+        invoicesPanelButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        invoicesPanelButton.setFocusPainted(false);
+        invoicesPanelButton.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        invoicesPanelButton.setIconTextGap(10);
+        invoicesPanelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                purchasePanelButtonActionPerformed(evt);
+                invoicesPanelButtonActionPerformed(evt);
             }
         });
-        navPanel.add(purchasePanelButton);
+        navPanel.add(invoicesPanelButton);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -401,17 +401,17 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_logoutButtonActionPerformed
 
-    private void homePanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homePanelButtonActionPerformed
+    private void billingPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billingPanelButtonActionPerformed
         updatePanel(new AdminHomePanel());
         setNavDefaultColor();
-        homePanelButton.setBackground(btnActive);
-    }//GEN-LAST:event_homePanelButtonActionPerformed
+        billingPanelButton.setBackground(btnActive);
+    }//GEN-LAST:event_billingPanelButtonActionPerformed
 
-    private void salesPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salesPanelButtonActionPerformed
+    private void returnsPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnsPanelButtonActionPerformed
         updatePanel(new AdminSalesPanel());
         setNavDefaultColor();
-        salesPanelButton.setBackground(btnActive);
-    }//GEN-LAST:event_salesPanelButtonActionPerformed
+        returnsPanelButton.setBackground(btnActive);
+    }//GEN-LAST:event_returnsPanelButtonActionPerformed
 
     private void productsPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productsPanelButtonActionPerformed
         updatePanel(new AdminProductsPanel());
@@ -419,11 +419,11 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
         productsPanelButton.setBackground(btnActive);
     }//GEN-LAST:event_productsPanelButtonActionPerformed
 
-    private void purchasePanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purchasePanelButtonActionPerformed
+    private void invoicesPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invoicesPanelButtonActionPerformed
         updatePanel(new AdminPurchasePanel());
         setNavDefaultColor();
-        purchasePanelButton.setBackground(btnActive);
-    }//GEN-LAST:event_purchasePanelButtonActionPerformed
+        invoicesPanelButton.setBackground(btnActive);
+    }//GEN-LAST:event_invoicesPanelButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -441,9 +441,10 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton billingPanelButton;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JPanel headerPanel;
-    private javax.swing.JButton homePanelButton;
+    private javax.swing.JButton invoicesPanelButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -460,7 +461,6 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
     private javax.swing.JToggleButton menuToggleButton;
     private javax.swing.JPanel navPanel;
     private javax.swing.JButton productsPanelButton;
-    private javax.swing.JButton purchasePanelButton;
-    private javax.swing.JButton salesPanelButton;
+    private javax.swing.JButton returnsPanelButton;
     // End of variables declaration//GEN-END:variables
 }

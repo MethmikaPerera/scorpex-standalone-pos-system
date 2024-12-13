@@ -165,7 +165,7 @@
         <Property name="rows" type="int" value="10"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="homePanelButton">
+        <Component class="javax.swing.JButton" name="billingPanelButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -189,10 +189,10 @@
             <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="homePanelButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="billingPanelButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="salesPanelButton">
+        <Component class="javax.swing.JButton" name="returnsPanelButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -216,7 +216,7 @@
             <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salesPanelButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="returnsPanelButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="productsPanelButton">
@@ -246,7 +246,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productsPanelButtonActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="purchasePanelButton">
+        <Component class="javax.swing.JButton" name="invoicesPanelButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -270,7 +270,7 @@
             <Property name="iconTextGap" type="int" value="10"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="purchasePanelButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="invoicesPanelButtonActionPerformed"/>
           </Events>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel3">
