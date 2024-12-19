@@ -30,8 +30,8 @@ public class AdminDashboardWindow extends javax.swing.JFrame {
         
         AppIcon.setAppIcon(this);
         
-        usernameLabel.setText(AdminLoginWindow.loggedAdmin.getUsername());
-        emailLabel.setText(AdminLoginWindow.loggedAdmin.getEmail());
+//        usernameLabel.setText(AdminLoginWindow.loggedAdmin.getUsername());
+//        emailLabel.setText(AdminLoginWindow.loggedAdmin.getEmail());
         
         updatePanel(new AdminHomePanel());
         setNavDefaultColor();

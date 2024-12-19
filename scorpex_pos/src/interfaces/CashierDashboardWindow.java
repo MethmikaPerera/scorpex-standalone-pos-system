@@ -23,14 +23,14 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
     Color btnActive = new Color(255,204,51);
     
     /**
-     * Creates new form AdminDashboard
+     * Creates new form Cashier Dashboard
      */
     public CashierDashboardWindow() {
         initComponents();
         
         AppIcon.setAppIcon(this);
         
-        updatePanel(new AdminHomePanel());
+        updatePanel(new CashierBillingPanel());
         setNavDefaultColor();
         billingPanelButton.setBackground(btnActive);
     }
@@ -402,25 +402,25 @@ public class CashierDashboardWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutButtonActionPerformed
 
     private void billingPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_billingPanelButtonActionPerformed
-        updatePanel(new AdminHomePanel());
+        updatePanel(new CashierBillingPanel());
         setNavDefaultColor();
         billingPanelButton.setBackground(btnActive);
     }//GEN-LAST:event_billingPanelButtonActionPerformed
 
     private void returnsPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnsPanelButtonActionPerformed
-        updatePanel(new AdminSalesPanel());
+        updatePanel(new CashierReturnsPanel());
         setNavDefaultColor();
         returnsPanelButton.setBackground(btnActive);
     }//GEN-LAST:event_returnsPanelButtonActionPerformed
 
     private void productsPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productsPanelButtonActionPerformed
-        updatePanel(new AdminProductsPanel());
+        updatePanel(new CashierProductsPanel());
         setNavDefaultColor();
         productsPanelButton.setBackground(btnActive);
     }//GEN-LAST:event_productsPanelButtonActionPerformed
 
     private void invoicesPanelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invoicesPanelButtonActionPerformed
-        updatePanel(new AdminPurchasePanel());
+        updatePanel(new CashierInvoicesPanel());
         setNavDefaultColor();
         invoicesPanelButton.setBackground(btnActive);
     }//GEN-LAST:event_invoicesPanelButtonActionPerformed
